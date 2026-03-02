@@ -53,7 +53,7 @@ Avant de commencer, assurez-vous d'avoir installé:
 ### 1. Cloner le projet
 
 ```bash
-git clone <votre-repo>
+git clone <https://github.com/Mboumbalyonnel/chess-checkers-platform>
 cd chess-checkers-platform
 ```
 

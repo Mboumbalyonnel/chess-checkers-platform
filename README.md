@@ -1,25 +1,25 @@
-# 🎮 Plateforme de Jeux d'Échecs et de Dames
+#  Plateforme de Jeux d'Échecs et de Dames
 
 Une plateforme web moderne pour jouer aux échecs et aux dames en ligne ou contre l'IA, développée avec React, Node.js, MongoDB et Socket.IO.
 
-## 🌟 Fonctionnalités
+##  Fonctionnalités
 
 ### Jeux Disponibles
-- ♔ **Échecs**: Jeu d'échecs complet avec toutes les règles officielles
-- ⚫ **Dames**: Jeu de dames classique avec promotion des pièces
+-  **Échecs**: Jeu d'échecs complet avec toutes les règles officielles
+-  **Dames**: Jeu de dames classique avec promotion des pièces
 
 ### Modes de Jeu
-- 🤖 **Contre l'IA**: Trois niveaux de difficulté (Facile, Intermédiaire, Difficile)
-- 🌐 **En Ligne**: Jouez contre d'autres joueurs en temps réel
-- 👥 **Local**: Jouez sans connexion (deux joueurs sur le même appareil)
+-  **Contre l'IA**: Trois niveaux de difficulté (Facile, Intermédiaire, Difficile)
+-  **En Ligne**: Jouez contre d'autres joueurs en temps réel
+-  **Local**: Jouez sans connexion (deux joueurs sur le même appareil)
 
 ### Fonctionnalités Utilisateur
-- 🔐 Inscription et connexion sécurisées
-- 📊 Suivi des statistiques personnelles
-- 📜 Historique des parties
-- 💾 Sauvegarde automatique des progressions
+-  Inscription et connexion sécurisées
+-  Suivi des statistiques personnelles
+-  Historique des parties
+-  Sauvegarde automatique des progressions
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
 ### Frontend
 - **React** 18.2.0 - Framework UI
@@ -40,7 +40,7 @@ Une plateforme web moderne pour jouer aux échecs et aux dames en ligne ou contr
 - **JWT** - Authentification
 - **bcryptjs** - Hash des mots de passe
 
-## 📋 Prérequis
+##  Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé:
 
@@ -48,7 +48,7 @@ Avant de commencer, assurez-vous d'avoir installé:
 - **npm** ou **yarn**
 - **MongoDB** (version 5 ou supérieure)
 
-## 🚀 Installation
+## Installation
 
 ### 1. Cloner le projet
 
@@ -109,7 +109,7 @@ cd ../frontend
 npm install
 ```
 
-## 🎯 Lancement de l'Application
+##  Lancement de l'Application
 
 ### Option 1: Lancement manuel (mode développement)
 
@@ -135,11 +135,11 @@ Créez un fichier `start.sh` à la racine:
 #!/bin/bash
 
 # Démarrer MongoDB
-echo "🔄 Démarrage de MongoDB..."
+echo " Démarrage de MongoDB..."
 sudo systemctl start mongodb
 
 # Démarrer le backend
-echo "🔄 Démarrage du backend..."
+echo " Démarrage du backend..."
 cd backend
 npm run dev &
 BACKEND_PID=$!
@@ -148,12 +148,12 @@ BACKEND_PID=$!
 sleep 3
 
 # Démarrer le frontend
-echo "🔄 Démarrage du frontend..."
+echo " Démarrage du frontend..."
 cd ../frontend
 npm start &
 FRONTEND_PID=$!
 
-echo "✅ Application démarrée!"
+echo " Application démarrée!"
 echo "Frontend: http://localhost:3000"
 echo "Backend: http://localhost:5000"
 echo ""
@@ -169,7 +169,7 @@ chmod +x start.sh
 ./start.sh
 ```
 
-## 📁 Structure du Projet
+##  Structure du Projet
 
 ```
 chess-checkers-platform/
@@ -203,7 +203,7 @@ chess-checkers-platform/
 └── README.md                    # Ce fichier
 ```
 
-## 🎮 Utilisation
+##  Utilisation
 
 ### 1. Page d'Accueil
 - Cliquez sur "Commencer à Jouer" pour jouer sans compte
@@ -224,7 +224,7 @@ chess-checkers-platform/
   - Annuler (échecs uniquement)
   - Retour au menu
 
-## 🔧 Configuration Avancée
+##  Configuration Avancée
 
 ### Modifier le Port du Backend
 
@@ -267,7 +267,7 @@ server {
 }
 ```
 
-## 🐛 Dépannage
+##  Dépannage
 
 ### Erreur de connexion à MongoDB
 
@@ -299,7 +299,7 @@ Assurez-vous que `CORS_ORIGIN` dans `.env` correspond à l'URL du frontend:
 CORS_ORIGIN=http://localhost:3000
 ```
 
-## 📝 API Endpoints
+##  API Endpoints
 
 ### Authentification
 
@@ -323,7 +323,7 @@ CORS_ORIGIN=http://localhost:3000
 - `opponentMove` - Mouvement de l'adversaire
 - `opponentLeft` - Adversaire déconnecté
 
-## 🚀 Déploiement en Production
+##  Déploiement en Production
 
 ### 1. Build du Frontend
 
@@ -368,7 +368,7 @@ pm2 save
 pm2 startup
 ```
 
-## 🤝 Contribution
+##  Contribution
 
 Les contributions sont les bienvenues! N'hésitez pas à:
 
@@ -378,27 +378,27 @@ Les contributions sont les bienvenues! N'hésitez pas à:
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-## 📄 Licence
+##  Licence
 
 Ce projet est sous licence MIT.
 
-## 👨‍💻 Auteur
+##  Auteur
 
 Développé avec ❤️ pour les amateurs de jeux de stratégie
 
-## 🙏 Remerciements
+##  Remerciements
 
 - Chess.js pour la logique d'échecs
 - React-Chessboard pour l'interface d'échecs
 - Bootstrap pour le design
 - La communauté open-source
 
-## 📞 Support
+##  Support
 
 Pour toute question ou problème:
 - Ouvrez une issue sur GitHub
-- Envoyez un email à support@example.com
+- Envoyez un email à Lyonnelmboumba2003@gmail.com
 
 ---
 
-**Bon jeu! ♔⚫**
+**Bon jeu! ♔**

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom'; // ✅ AJOUT DE useSearchParams
 import axios from 'axios';
+import { API_URL } from '../config';
 
 function GameSelection() {
   const navigate = useNavigate();
@@ -24,10 +25,9 @@ function GameSelection() {
       if (isLoggedIn && !isGuest) {
         try {
           const token = localStorage.getItem('token');
-          const response = await axios.get('http://localhost:5000/api/tokens/balance', {
-            headers: { Authorization: `Bearer ${token}` }
-          });
-          setTokens(response.data.tokens);
+const response = await axios.get(`${API_URL}/api/tokens/balance`, {
+  headers: { Authorization: `Bearer ${token}` }
+});          setTokens(response.data.tokens);
         } catch (error) {
           console.error('Erreur chargement jetons:', error);
         }

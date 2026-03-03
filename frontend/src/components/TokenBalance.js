@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './TokenBalance.css';
+import { API_URL } from '../config';
 
 const TokenBalance = () => {
   const [tokens, setTokens] = useState(0);
@@ -22,10 +23,9 @@ const TokenBalance = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/tokens/balance', {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-
+const response = await axios.get(`${API_URL}/api/tokens/balance`, {
+  headers: { Authorization: `Bearer ${token}` }
+});
       setTokens(response.data.tokens);
       setLoading(false);
     } catch (error) {
@@ -39,10 +39,11 @@ const TokenBalance = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/tokens/daily-refill',
-        {},
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+  `${API_URL}/api/tokens/daily-refill`,
+  {},
+  { headers: { Authorization: `Bearer ${token}` } }
+);
+
 
       alert(response.data.message);
       setTokens(response.data.totalTokens);

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
+import { API_URL } from '../config';
+
 
 // ─── CONSTANTS ───────────────────────────────────────────────────────────────
 const BOARD_SIZE = 8;
@@ -542,9 +544,8 @@ function CheckersGame() {
       return;
     }
 
-    const socket = io('http://localhost:5000', { transports: ['websocket'] });
-    socketRef.current = socket;
-
+const socket = io(API_URL, { transports: ['websocket'] });
+socketRef.current = socket;
     socket.on('connect', () => {
       setOnlineMessage("Recherche d'un adversaire...");
       socket.emit('joinQueue', { gameType: 'checkers', userId, mode: 'online' });

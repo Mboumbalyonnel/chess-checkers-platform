@@ -15,11 +15,11 @@
     "react-scripts": "5.0.1",
     "socket.io-client": "^4.8.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "EXTEND_ESLINT=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "EXTEND_ESLINT=false react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": ["react-app"]

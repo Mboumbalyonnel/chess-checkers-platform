@@ -37,16 +37,21 @@ mongoose.connect(MONGODB_URI, {
 const authRoutes = require('./routes/auth');
 const gameRoutes = require('./routes/game');
 const tokenRoutes = require('./routes/tokens');
-const passwordRoutes = require('./routes/passwordReset'); // ✅ NOUVELLE ROUTE
+const passwordRoutes = require('./routes/passwordReset');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
 app.use('/api/tokens', tokenRoutes);
-app.use('/api/password', passwordRoutes); // ✅ NOUVELLE ROUTE AJOUTÉE
+app.use('/api/password', passwordRoutes);
 
 // Route de test
 app.get('/', (req, res) => {
   res.json({ message: 'Bienvenue sur l\'API Chess & Checkers' });
+});
+
+// Health check pour Render ✅
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 });
 
 // Modèle User pour la gestion des jetons
@@ -228,10 +233,10 @@ io.on('connection', (socket) => {
 // Démarrer le serveur
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀 Serveur démarré sur le port ${PORT}`);
-  console.log(`📡 Socket.IO activé`);
-  console.log(`🪙 Système de jetons actif`);
-  console.log(`🔐 Routes de réinitialisation de mot de passe actives`); // ✅ NOUVEAU LOG
+  console.log(`Serveur démarré sur le port ${PORT}`);
+  console.log(`Socket.IO activé`);
+  console.log(`Système de jetons actif`);
+  console.log(`Routes de réinitialisation de mot de passe actives`);
 });
 
 module.exports = { app, io };
